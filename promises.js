@@ -67,7 +67,7 @@ Can you:
     const handleResize = (event) => {
       window.requestAnimationFrame(() => {
         if (window.innerWidth <= startingWindowWidth / 2) {
-          window.removeEventListener('click', handleResize);
+          window.removeEventListener('resize', handleResize);
           resolve('\n\nResizing the browser window is one of your talents');
         } else {
           document.body.textContent += '\n' + window.innerWidth;
